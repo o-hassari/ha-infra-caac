@@ -6,3 +6,15 @@
   register: galera_start_result
   ignore_errors: false
   when: ansible_play_batch[0] == inventory_hostname
+
+
+# - name: config - configuring keepalived
+#   template:
+#     src: etc/keepalived/keepalived.conf.j2
+#     dest: /etc/keepalived/keepalived.conf
+#     owner: root
+#     group: root
+#     mode: u=rw,g=r,o=r
+#   become: true
+#   notify:
+#     - restart keepalived

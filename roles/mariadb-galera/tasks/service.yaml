@@ -5,3 +5,10 @@
     enabled: yes
   become: true
   when: ansible_play_batch[0] != inventory_hostname
+
+# - name: service | enabling keepalived on boot and start
+#   service:
+#     name: keepalived
+#     state: started
+#     enabled: true
+#   become: true
